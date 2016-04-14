@@ -23,7 +23,7 @@ public class Board {
     }
 
 
-//    public void printBoard() { // Having this method here does nothing because the board is filled in the play() in BruteNextMove.java
+//    public void printBoard() { // Having this method here does nothing because the board is filled in the play() in BruteNextMove.java .
 //        for (int i = 0; i < ROWS; ++i) {
 //            for (int j = 0; j < COLUMNS; ++j) {
 //                System.out.printf("%2d ", board[i][j]);

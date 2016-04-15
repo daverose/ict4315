@@ -4,8 +4,8 @@ public abstract class AbstractNextMove {
     Knight myKnight = new Knight();
     static final int ROWS = 8;
     static final int COLUMNS = 8;
-    private int currentCol = 0;
-    private int currentRow = 0;
+    private int currentCol;
+    private int currentRow;
     public void setCurrentCol(int col) {
         currentCol = col;
     }

@@ -30,6 +30,7 @@ public class Game {
             }
         }
         System.out.println("Brute Force Trials: " + count);
+        System.out.println();
         HeuristicNextMove HeuristicNextMove = new HeuristicNextMove();
         int numberOfMoves;
         for (int row = 0; row < ROWS / 2; ++row) {

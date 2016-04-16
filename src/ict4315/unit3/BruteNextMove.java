@@ -2,7 +2,6 @@ package ict4315.unit3;
 import java.util.Random;
 
 public class BruteNextMove extends AbstractNextMove implements nextMove {
-    //Board board = new Board();
     Random random = new Random();
     Knight myKnight = new Knight();
     private int[][] board = new int[8][8];

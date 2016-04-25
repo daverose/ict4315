@@ -6,8 +6,10 @@ package ict4315.unit5;
  * All amounts are in PENNIES. Never use floats or doubles for money.
  */
 public class Account {
-    protected String accountNumber;
-    protected int balance;
+    String accountNumber;
+    int balance;
+
+
 
     Account(){
 

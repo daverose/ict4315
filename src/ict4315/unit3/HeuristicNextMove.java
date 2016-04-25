@@ -39,12 +39,9 @@ public class HeuristicNextMove extends AbstractNextMove implements nextMove{
         for (int i = 0; i < myKnight.getMoves(); ++i) {
             int r = currentRow + myKnight.getHorizontal(i);
             int c = currentCol + myKnight.getVertical(i);
-            System.out.println("Here are r and c " + r + " " + c);
             if (legalMove(r, c)) {
                 if (accessibility[r][c] < access) {
                     access = accessibility[r][c];
-                System.out.println("Here is access" + access);
-//                    System.out.println("Here is access " + access);
                     move = i;
                 }
             }
@@ -55,7 +52,6 @@ public class HeuristicNextMove extends AbstractNextMove implements nextMove{
             currentCol += myKnight.getVertical(move);
             return true;
         } else {
-            System.out.println("move wasn't = -1");
             return false;
         }
     }
@@ -65,7 +61,6 @@ public class HeuristicNextMove extends AbstractNextMove implements nextMove{
             ++move;
             board[currentRow][currentCol] = move;
         } while (nextMove());
-        System.out.println("INside play returning move");
         return move;
     }
     public boolean hasMove(int row, int col){
@@ -92,8 +87,6 @@ public class HeuristicNextMove extends AbstractNextMove implements nextMove{
             int c = currentCol + myKnight.getVertical(i);
             if (onBoard(r, c) && accessibility[r][c] > 0) {
                 --accessibility[r][c];
-           //   System.out.println("Here is accessability[r][c] " + Arrays.toString(accessibility[r]) + Arrays.toString(accessibility[c]));
-              //  System.out.println("Here is access " + access);
             }
         }
 

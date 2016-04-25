@@ -16,6 +16,7 @@ public class SavingsAccountTest {
     public void dontAllowAccountToBeOpenedWithLessThanOneCent(){
         SavingsAccount myAccount = new SavingsAccount("40001",0);
 
+
     }
 //    @Test
 //    public void interestRateNotNegative () {

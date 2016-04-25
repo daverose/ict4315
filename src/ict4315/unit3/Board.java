@@ -14,6 +14,4 @@ public class Board {
         board[row][col] = val;
     }
 
-
-
 }

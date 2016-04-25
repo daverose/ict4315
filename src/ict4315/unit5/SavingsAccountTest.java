@@ -1,15 +1,21 @@
 package ict4315.unit5;
 
+
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 
+
 public class SavingsAccountTest {
-  //  SavingsAccount myAccount = new SavingsAccount("40001",10000);
+  SavingsAccount myAccount = new SavingsAccount("40001",-2);
+
   @Test
   public void balanceNotNegative() {
-    SavingsAccount myAccount = new SavingsAccount("102100", 2);
-    {
       assertTrue(myAccount.getBalance() > 0);
+    }
+    @Test(expected=IllegalArgumentException.class)
+    public void dontAllowAccountToBeOpenedWithLessThanOneCent(){
+        SavingsAccount myAccount = new SavingsAccount("40001",0);
+
 
     }
 //    @Test
@@ -29,4 +35,4 @@ public class SavingsAccountTest {
 //
 //    }
   }
-}
+

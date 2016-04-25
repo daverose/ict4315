@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class SavingsAccount extends Account {
     private float interest = 0;
-    private float interestRate;
+    private double interestRate;
     private int dailySum;
     private float dailyAverage;
     private ArrayList<Integer> dailyTransactions = new ArrayList<>();
@@ -34,7 +34,7 @@ public class SavingsAccount extends Account {
             throw new IllegalArgumentException("Initial balance can not be zero. Customer must open an account with a deposit.");
         }
     }
-    public void setInterestRate(float interestRate){
+    public void setInterestRate(double interestRate){
         interestRate = this.interestRate;
     }
 }

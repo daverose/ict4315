@@ -1,5 +1,8 @@
 package ict4315.unit5;
 
+
+import java.util.Calendar;
+
 /**
  * Representation of a bank account that cannot go overdrawn.
  *
@@ -8,11 +11,14 @@ package ict4315.unit5;
 public class Account {
     String accountNumber;
     int balance;
-
-
-
+    String date;
     Account(){
 
+    }
+
+    public void recordTransaction() {
+        //Need to call this from inside all withdrawals and deposits as well as interest paid.
+        //the date and balance need to be updated with the trasaction record.
     }
     public Account(String accountNumber) {
         this.accountNumber = accountNumber;

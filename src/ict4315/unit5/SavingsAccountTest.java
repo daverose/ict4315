@@ -1,7 +1,5 @@
 package ict4315.unit5;
 
-
-import org.junit.Rule;
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 
@@ -27,7 +25,7 @@ public class SavingsAccountTest {
     @Test
     public void interestRateNotNegative () {
         SavingsAccount myAccount = new SavingsAccount("40001",100);
-        assertTrue(myAccount.getInterest() >= 0);
+        assertTrue(myAccount.getInterestRate() >= 0);
     }
     @Test
     public void depositIncreasesBalanceByDeposit () {

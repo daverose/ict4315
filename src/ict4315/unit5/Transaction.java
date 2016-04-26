@@ -42,8 +42,7 @@ public class Transaction {
 
     }
     public String toString(){
-        String str = "Account Number: " + accountNumber + " Date: " + date + " Transaction: " + transaction + " OverDraft Sent: " + overDrafLetterSent;
-        return str;
+        return String.format("Account Number: " + accountNumber + " Date: " + date + " Transaction: " + transaction + " OverDraft Sent: " + overDrafLetterSent + " Current Balance : " + "$%d", balance / 100);
     }
 }
 

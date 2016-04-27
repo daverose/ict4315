@@ -6,7 +6,6 @@ import java.util.ArrayList;
 public class SavingsAccount extends Account {
     private double paidInterest;
     private double interestRate;
-    private int dailySum;
     private double dailyAverage;
     private ArrayList<Integer> dailyTransactions = new ArrayList<>();
     private ArrayList<Float> dailyAveragesForBillingCycle = new ArrayList<>();
@@ -21,16 +20,17 @@ public class SavingsAccount extends Account {
 
     //This method iterates through dailyTransactions and sums them, then it divides the sum by the size of the ArrayList to get the average for the day.
     // This is missing a date comparison where it first looks at the date and determines if the next entry should be stored in the current day or a new day within
-    // the dailyAveragesForBillingCycle arrayList .
+    // the dailyAveragesForBillingCycle arrayList . If I had more time, I would add this capability for the interest in the month.
     public double getDailyAverage() {
+        int dailySum = 0;
+        int i = dailyTransactions.size();
         for (Integer transaction : dailyTransactions) {
             dailySum += transaction;
         }
-        dailyAverage = dailySum / dailyTransactions.size();
-        System.out.println("Inside Daily average " + dailyAverage);
+        dailyAverage = dailySum / i;
         return dailyAverage;
     }
-
+//I need to enhance the transaction
     public double getMonthlyAverage() {
         double sum = 0;
         double aveDailyBalence;
@@ -40,13 +40,7 @@ public class SavingsAccount extends Account {
         aveDailyBalence = sum / dailyAveragesForBillingCycle.size();
         return aveDailyBalence;
     }
-//
-//                    daysInBillingCycle.add(dailyAverage);
-//                    interest += daysInBillingCycle.get() * this.getInterestRate();
-//                }
-//        System.out.println("Interest that should be added to account is :" + interest);
-//        return interest;
-//    }
+
 
 
     SavingsAccount(final String actNumber, int initialDeposit) {
@@ -70,7 +64,6 @@ public class SavingsAccount extends Account {
         double iRate;
         iRate= this.getInterestRate();
         dAve = this.getDailyAverage();
-        System.out.println(dAve + " " + iRate);
         paidInterest = dAve * iRate;
         return paidInterest;
     }

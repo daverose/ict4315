@@ -20,6 +20,12 @@ public class Bank {
         System.out.println(String.format("Your overdraft is now: $%d", myCheckingAccount.getOverDraft() / 100));
         myCheckingAccount.withdraw(20000);
         myCheckingAccount.withdraw(10000);
+        myCheckingAccount.withdraw(100000);
+        myCheckingAccount.withdraw(10000);
+        myCheckingAccount.withdraw(10000);
+        myCheckingAccount.withdraw(10000);
+        myCheckingAccount.withdraw(10000);
+        myCheckingAccount.withdraw(30000);
 
         for (int i = 0; i < transactions.size(); ++i) {
             System.out.println(transactions.get(i));
@@ -27,7 +33,7 @@ public class Bank {
         System.out.println("Your interest rate is " + myAccount.getInterestRate());
         System.out.println("Your daily transactions are " + myAccount.getDailyTransactions());
         System.out.println("Your daily average is: " + myAccount.getDailyAverage());
-        System.out.println("Your daily interest is: " + myAccount.computeInterest());
+        System.out.println(String.format("Your daily interest is: $%.2f ", myAccount.computeInterest() / 100));
 
 
     }

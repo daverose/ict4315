@@ -11,7 +11,7 @@ public class CheckingAccount extends Account {
     }
 
     public void setOverDraft(int oD) {
-        overDraft = oD;
+        this.overDraft = oD;
     }
 
     public int getOverDraft() {
@@ -22,9 +22,8 @@ public class CheckingAccount extends Account {
     public void withdraw(int amount) {
         if (amount > balance + this.overDraft) {
             throw new IllegalArgumentException(String.format("Cannot withdraw more than your overdraft protection allows : $%d", overDraft - balance));
-        } else if (balance - amount < this.overDraft) {
+        } else if (balance - amount < 0 && balance - amount < Math.abs(this.overDraft)) {
             balance -= amount;
-
             this.setOverDraft(balance + overDraft);
             int transactionField = amount;
             Transaction t = new Transaction();

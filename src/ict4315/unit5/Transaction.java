@@ -1,7 +1,6 @@
 package ict4315.unit5;
 
 import java.text.DateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 
 
@@ -12,7 +11,9 @@ public class Transaction {
     private int balance;
     private boolean overDrafLetterSent;
 
-
+public void sendOverDraftLetter(){
+    this.overDrafLetterSent = true;
+}
 
     public void setAccountNumber(String actNum) {
         accountNumber = actNum;

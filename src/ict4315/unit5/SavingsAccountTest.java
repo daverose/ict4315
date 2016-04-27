@@ -14,7 +14,6 @@ public class SavingsAccountTest {
     public void dontAllowAccountToBeOpenedWithLessThanOneCent(){
         SavingsAccount myAccount = new SavingsAccount("40001",0); // Created just to test the constructor.
 
-
     }
       @Test
   public void balanceNotNegative() {

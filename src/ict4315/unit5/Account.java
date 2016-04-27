@@ -41,6 +41,7 @@ public class Account {
         t.setDate();
         t.setTransaction(-transactionField);
         bank.transactions.add(t);
+
     }
 
     public void deposit(int amount) {

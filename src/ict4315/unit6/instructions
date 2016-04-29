@@ -1,0 +1,21 @@
+Write a class called “Contact” that stores a person’s contact information.
+The exact fields are up to you - it could be address, Google+ account, Twitter handle, email, business information, whatever.
+You should make it have something useful but the only required field should be the contact’s name.
+The constructor should be private and you should create instances of it using the Builder pattern.
+
+Given the following interface:
+
+public interface ContactWriter {
+  void startContact(String name);
+  void writeField(String field, String value);
+  String finishContact();
+}
+
+create at least two implementations of it that output a Contact in different formats, e.g. HTML, XML, plain text, JSON, etc.
+Create a method in Contact called writeContact(ContactWriter writer) that takes an instance of the interface and writes out the information contained in the Contact.
+
+Write a Factory that returns the appropriate ContactWriter instance using a Factory Method. The factory should be a Singleton.
+
+Write a Main class that creates a collection of Contact instances, gets a ContactWriter instance from the Factory and then writes the Contacts out.
+
+For full credit write a set of unit tests for all classes except the Main class.

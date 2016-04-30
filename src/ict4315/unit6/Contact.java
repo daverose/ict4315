@@ -7,34 +7,39 @@ public class Contact {
     private String firstName;
     private String lastName;
 
-
-    public void writeContact(ContactWriter writer){
-        //Make it happen!
-    }
-    private Contact(Builder builder){
+    private Contact(Builder builder) {
         firstName = builder.firstName;
         lastName = builder.lastName;
     }
 
+    public static Builder newBuilder() {
+        return new Builder();
+    }
 
-    public class Builder {
+    public static class Builder {
         private String firstName;
         private String lastName;
 
-        public Builder firstName(String name) {
+        private Builder() {}
+
+        public Contact build() {
+            return new Contact(this);
+        }
+
+        public Builder setfirstName(String name) {
             this.firstName = name;
             return this;
         }
-        public Builder lastName(String name) {
+
+        public Builder setlastName(String name) {
             this.lastName = name;
             return this;
         }
-        public Builder newBuilder(){
-            return new Builder();
-        }
 
-        private Builder() {}
+
     }
-
-
+//    public void writeContact(ContactWriter writer) {
+//        //Make it happen!
+//    }
 }
+

@@ -7,6 +7,10 @@ package ict4315.unit6;
 // and then writes the Contacts out.
 public class Main {
         public static void main(String args[]){
+            Builder contact = Builder.newBuilder();
+            contact.setfirstName("Dave");
+            contact.setlastName("Rose");
+            System.out.println(contact);
 
         }
 }

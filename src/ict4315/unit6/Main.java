@@ -7,11 +7,12 @@ package ict4315.unit6;
 // and then writes the Contacts out.
 public class Main {
         public static void main(String[] args){
-            Contact.Builder mycontact = Contact.newBuilder();
-            mycontact.setfirstName("Dave");
-            mycontact.setlastName("Rose");
-            mycontact.build();
-            System.out.println(mycontact);
+            Contact con = Contact.newBuilder()
+            .setfirstName("Dave")
+            .setlastName("Rose")
+            .setEmail("davearose@gmail.com")
+            .build();
+            System.out.println(con.toString());
 
         }
 }

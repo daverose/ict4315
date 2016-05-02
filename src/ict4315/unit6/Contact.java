@@ -6,10 +6,17 @@ package ict4315.unit6;
 public class Contact {
     private String firstName;
     private String lastName;
+    private String email;
+    @Override
+    public String toString(){
+        String str =  this.firstName + " " + this.lastName;
+        return str;
+    }
 
     private Contact(Builder builder) {
         firstName = builder.firstName;
         lastName = builder.lastName;
+        email = builder.email;
     }
 
     public static Builder newBuilder() {
@@ -19,6 +26,7 @@ public class Contact {
     public static class Builder {
         private String firstName;
         private String lastName;
+        private String email;
 
         private Builder() {}
 
@@ -27,15 +35,18 @@ public class Contact {
         }
 
         public Builder setfirstName(String name) {
-            this.firstName = name;
+            firstName = name;
             return this;
         }
 
         public Builder setlastName(String name) {
-            this.lastName = name;
+            lastName = name;
             return this;
         }
-
+        public Builder setEmail(String e){
+            email = e;
+            return this;
+        }
 
     }
 //    public void writeContact(ContactWriter writer) {

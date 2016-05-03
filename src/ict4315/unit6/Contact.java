@@ -8,6 +8,7 @@ public class Contact {
     private String firstName;
     private String lastName;
     private String email;
+
     @Override
     public String toString(){
         String str =  this.firstName + " " + this.lastName;

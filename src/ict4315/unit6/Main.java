@@ -39,6 +39,5 @@ public class Main {
             conWriter.writeField("Email: ", "dcmetro@yahoo.com");
             //conWriter.finishContact();
             System.out.print(conWriter.finishContact());
-
         }
 }

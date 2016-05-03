@@ -4,6 +4,7 @@ package ict4315.unit6;
  * Created by daverose on 4/28/16.
  */
 public class Contact {
+    private static Builder instance = null;
     private String firstName;
     private String lastName;
     private String email;
@@ -19,8 +20,11 @@ public class Contact {
         email = builder.email;
     }
 
-    public static Builder newBuilder() {
-        return new Builder();
+    public static synchronized Builder getInstance() {
+        if (instance == null){
+            instance = new Builder();
+        }
+        return instance;
     }
 
     public static class Builder {

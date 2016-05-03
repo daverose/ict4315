@@ -7,7 +7,7 @@ package ict4315.unit6;
 // and then writes the Contacts out.
 public class Main {
         public static void main(String[] args){
-            Contact con = Contact.newBuilder()
+            Contact con = Contact.getInstance()
             .setfirstName("Dave")
             .setlastName("Rose")
             .setEmail("davearose@gmail.com")

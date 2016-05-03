@@ -17,7 +17,7 @@ public class ContactWriterHtml implements ContactWriter {
     }
     public String finishContact(){
         string.append("</p></body></html>");
-        String output = string.toString();
-        return output;
+        String formattedContact = string.toString();
+        return formattedContact;
     }
 }

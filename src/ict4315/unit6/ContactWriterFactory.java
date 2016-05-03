@@ -12,7 +12,7 @@ public class ContactWriterFactory {
     }
     private ContactWriterFactory(){}
 
-   public ContactWriterHtml conWriter setFormatHtml(){
+   public ContactWriterHtml setFormatHtml(){
            ContactWriterHtml htmlWriter = new ContactWriterHtml();
            return htmlWriter;
        }

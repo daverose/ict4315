@@ -12,7 +12,7 @@ public class ContactWriterText implements ContactWriter {
         string.append(field).append(value);
     }
     public String finishContact(){
-        String output = string.toString();
-        return output;
+        String formattedContact = string.toString();
+        return formattedContact;
     }
 }

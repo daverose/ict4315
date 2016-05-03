@@ -1,7 +1,7 @@
 package ict4315.unit6;
 
 
-public class ContactWriterFactory implements ContactWriter {
+public class ContactWriterFactory {
     public static ContactWriterFactory instance = null;
     public static synchronized ContactWriterFactory getInstance() {
         if (instance == null){
@@ -11,14 +11,15 @@ public class ContactWriterFactory implements ContactWriter {
     }
     private ContactWriterFactory(){}
 
-    public void startContact(String name){
-
-    }
-    public void  writeField(String field, String value) {
-
-    }
-    public String finishContact(){
-
-    }
-
+   public ContactWriter setFormat(String format){
+       if (format == "html"){
+           ContactWriterHtml htmlWriter = new ContactWriterHtml();
+           return htmlWriter;
+       } else if (format == "text"){
+           ContactWriterText textWriter = new ContactWriterText();
+           return textWriter;
+       } else {
+           throw new IllegalArgumentException("Format must be of type html or text and is case sensitive");
+       }
+   }
 }

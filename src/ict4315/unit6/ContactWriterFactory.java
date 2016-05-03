@@ -12,9 +12,14 @@ public class ContactWriterFactory {
     }
     private ContactWriterFactory(){}
 
-   public ContactWriterHtml setFormatHtml(){
-           ContactWriterHtml htmlWriter = new ContactWriterHtml();
-           return htmlWriter;
+   public ContactWriter setFormat(String format) {
+       if (format == "html") {
+           ContactWriterHtml contactWriter = new ContactWriterHtml();
+           return contactWriter;
+       } else if (format == "text") {
+           ContactWriterText contactWriter = new ContactWriterText();
+           return contactWriter;
+       } else throw new IllegalArgumentException("Format must be a string; either html or text and is case sensitive");
        }
 
    }

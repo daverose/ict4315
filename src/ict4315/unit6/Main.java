@@ -18,13 +18,27 @@ public class Main {
             .setEmail("davearose@gmail.com")
             .build(); //build returns a new contact
             contactList.add(con); // adds the new contact to the list
-            ContactWriter conWrterHtml = contactWriter.setFormatHtml();
-            conWrterHtml.startContact("Dave");
-            conWrterHtml.writeField("First Name ", "Dave");
-            conWrterHtml.writeField("Last Name ", "Rose");
-            conWrterHtml.writeField("Email ", "davearose@gmail.com");
-            String it = conWrterHtml.finishContact();
-            System.out.print(it);
+            Contact lore = Contact.getInstance()
+                    .setfirstName("Lorena")
+                    .setlastName("De Rienzo")
+                    .setEmail("dcmetro@yahoo.com")
+                    .build();
+            contactList.add(lore);
+
+
+            ContactWriter conWriter = contactWriter.setFormat("html"); // can be changed to html
+            conWriter.startContact("Dave");
+            conWriter.writeField("First Name: ", "Dave");
+            conWriter.writeField("Last Name: ", "Rose");
+            conWriter.writeField("Email: ", "davearose@gmail.com");
+            System.out.print(conWriter.finishContact());
+
+            conWriter.startContact("Lore");
+            conWriter.writeField("First Name: ", "Lore");
+            conWriter.writeField("Last Name: ", "De Rienzo");
+            conWriter.writeField("Email: ", "dcmetro@yahoo.com");
+            //conWriter.finishContact();
+            System.out.print(conWriter.finishContact());
 
         }
 }

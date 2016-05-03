@@ -54,8 +54,11 @@ public class Contact {
         }
 
     }
-//    public void writeContact(ContactWriter writer) {
-//        //Make it happen!
-//    }
+ public void writeContact(ContactWriter writer) {
+     writer.writeField("First Name ", firstName);
+     writer.writeField("Last Name ", lastName);
+     writer.writeField("Email: ", email);
+
+    }
 }
 

@@ -15,6 +15,7 @@ public class ContactWriterText implements ContactWriter {
     }
     public String finishContact(){
         String formattedContact = string.toString();
+        string.setLength(0);
         return formattedContact;
     }
 }

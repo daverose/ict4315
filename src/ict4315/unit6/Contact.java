@@ -9,10 +9,12 @@ public class Contact {
     private String lastName;
     private String email;
 
-    @Override
-    public String toString(){
-        String str =  this.firstName + " " + this.lastName;
-        return str;
+    public void writeContact(ContactWriter writer) {
+        writer.startContact(firstName);
+        writer.writeField("First Name ", firstName);
+        writer.writeField("Last Name ", lastName);
+        writer.writeField("Email: ", email);
+        System.out.print(writer.finishContact());
     }
 
     private Contact(Builder builder) {
@@ -54,11 +56,6 @@ public class Contact {
         }
 
     }
- public void writeContact(ContactWriter writer) {
-     writer.writeField("First Name ", firstName);
-     writer.writeField("Last Name ", lastName);
-     writer.writeField("Email: ", email);
 
-    }
 }
 

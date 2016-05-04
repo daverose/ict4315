@@ -20,6 +20,7 @@ public class ContactWriterHtml implements ContactWriter {
         string.append(System.getProperty("line.separator"));
         string.append("</p></body></html>");
         String formattedContact = string.toString();
+        string.setLength(0);
         return formattedContact;
     }
 }

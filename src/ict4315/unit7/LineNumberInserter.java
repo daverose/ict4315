@@ -1,19 +1,18 @@
 package ict4315.unit7;
 
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.*;
 
 
 public class LineNumberInserter {
     private String fileName;
-    private DataInputStream dataIn;
-    private DataInputStream in = new DataInputStream(dataIn);
 
+    public  DataInputStream getDataIn(){
+        DataInputStream dataIn = new DataInputStream(getFileinputStream(fileName));
+        return dataIn;
+    }
 
-    public DataOutputStream getDataOut(String name){
+    public DataOutputStream getDataOut(){
         DataOutputStream dataOut = new DataOutputStream(getFileOutputStream(fileName));
         return dataOut;
     }
@@ -22,6 +21,17 @@ public class LineNumberInserter {
         try {
             FileOutputStream outputStream = new FileOutputStream(name);
             return outputStream;
+        } catch (FileNotFoundException e) {
+            System.out.println("The file $ was not found." + name);
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public FileInputStream getFileinputStream(String name) {
+        try {
+            FileInputStream inputStream = new FileInputStream(name);
+            return inputStream;
         } catch (FileNotFoundException e) {
             System.out.println("The file $ was not found." + name);
             e.printStackTrace();

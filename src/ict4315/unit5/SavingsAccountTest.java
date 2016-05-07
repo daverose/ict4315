@@ -30,8 +30,7 @@ public class SavingsAccountTest {
     public void depositIncreasesBalanceByDeposit () {
         int currentBal = savAct.getBalance();
         savAct.deposit(100);
-        currentBal += 100;
-        assertTrue(savAct.getBalance() == currentBal );
+        assertTrue(savAct.getBalance() + 100 == currentBal );
 
     }
     @Test

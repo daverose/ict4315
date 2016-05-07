@@ -22,7 +22,7 @@ public class LineNumberInserter {
             FileOutputStream outputStream = new FileOutputStream(name);
             return outputStream;
         } catch (FileNotFoundException e) {
-            System.out.println("The file $ was not found." + name);
+            System.out.println("The file $ for writing contents to was not found." + name);
             e.printStackTrace();
         }
         return null;
@@ -33,7 +33,7 @@ public class LineNumberInserter {
             FileInputStream inputStream = new FileInputStream(name);
             return inputStream;
         } catch (FileNotFoundException e) {
-            System.out.println("The file $ was not found." + name);
+            System.out.println("The file $ for reading was not found." + name);
             e.printStackTrace();
         }
         return null;

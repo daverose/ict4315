@@ -7,9 +7,8 @@ import java.io.*;
 public class LineNumberInserter {
     private String fileName;
 
-    public String setFileName(String name) {
-        fileName = name;
-        return fileName;
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 
     public  DataInputStream getDataIn(){

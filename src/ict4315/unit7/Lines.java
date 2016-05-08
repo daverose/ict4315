@@ -2,6 +2,7 @@ package ict4315.unit7;
 
 
 public class Lines {
+    String emptyString = null;
 
     public String fivelines() {
         String fivelines;
@@ -27,7 +28,9 @@ public class Lines {
                 System.lineSeparator() + "If you want to wake up..." + System.lineSeparator()
                 + "more here" + System.lineSeparator() + "only Starbucks will do.");
         return string.toString();
-
+    }
+    public String outputLines(){
+        return this.emptyString;
 
     }
 }

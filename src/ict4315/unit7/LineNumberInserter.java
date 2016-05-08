@@ -1,66 +1,19 @@
 package ict4315.unit7;
 
 
-import java.io.*;
-
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 
 public class LineNumberInserter {
-    private String fileName;
+    Lines lines = new Lines();
+    DataStream stream = new DataStream();
+    DataInputStream dataIn = stream.getDataIn(lines.fivelines());
+    DataOutputStream dataOut = stream.getDataOut(lines.emptyString);
 
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
+
+    public void insertLineNumbers(DataInputStream dataIn, DataOutputStream dataOut){
+
     }
 
-    public  DataInputStream getDataIn(){
-        DataInputStream dataIn = new DataInputStream(getFileinputStream(fileName));
-        return dataIn;
-    }
 
-    public DataOutputStream getDataOut(){
-        DataOutputStream dataOut = new DataOutputStream(getFileOutputStream(fileName));
-        return dataOut;
-    }
-
-    public FileOutputStream getFileOutputStream(String name) {
-        FileOutputStream outputStream = null;
-        try {
-            outputStream = new FileOutputStream(name);
-            return outputStream;
-        } catch (FileNotFoundException e) {
-            System.out.println("The file $ for writing contents to was not found." + name);
-            e.printStackTrace();
-        } finally {
-            if (outputStream != null) {
-                try {
-                    outputStream.close();
-                } catch (IOException e) {
-                    System.out.println("Error getting fileoutputstream() " + e.getMessage());
-                    e.printStackTrace();
-                }
-            }
-        }
-        return null;
-    }
-
-    public FileInputStream getFileinputStream(String name) {
-        FileInputStream inputStream = null;
-        try {
-            inputStream = new FileInputStream(name);
-            return inputStream;
-        } catch (FileNotFoundException e) {
-            System.out.println("The file $ for reading was not found." + name);
-            e.printStackTrace();
-        } finally {
-            if (inputStream != null) {
-                try {
-                    inputStream.close();
-                } catch (IOException e){
-                    System.out.println("Couldn't close file. " + e.getMessage());
-                    e.printStackTrace();;
-                }
-            }
-
-        }
-        return null;
-    }
 }

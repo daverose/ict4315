@@ -1,5 +1,7 @@
 package ict4315.unit7;
 
+import java.io.DataOutputStream;
+
 /**
  * Created by drose200 on 5/7/2016.
  */
@@ -31,4 +33,16 @@ public class Output {
     public void setFileSize(int fileSize) {
         this.fileSize = fileSize;
     }
+
+//    public void printDataOutputStream(DataOutputStream dataOut) {
+//        DataOutputStream out = new DataOutputStream();
+//        out = dataOut;
+//        StringBuffer str = new StringBuffer();
+//        String tmp;
+//        while ((tmp = out.Write) != null) {
+//            str.append(tmp);
+//            System.out.println(tmp);
+//        }
+//    }
 }
+

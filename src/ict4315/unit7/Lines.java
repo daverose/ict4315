@@ -11,7 +11,6 @@ public class Lines {
         twolines = twoLines();
         fivelines = fivelines();
         sevenLines = sevenLines();
-        emptyString = null;
     }
     public String fivelines() {
         StringBuilder string = new StringBuilder();
@@ -32,7 +31,7 @@ public class Lines {
                 System.lineSeparator() + "What, are you one of those Dunkin Doughnuts people?" +
                 System.lineSeparator() + "Their coffee is like water and the doughnuts are made with Crisco" +
                 System.lineSeparator() + "If you want to wake up..." + System.lineSeparator()
-                + "more here" + System.lineSeparator() + "only Starbucks will do.");
+                + "and be able to do your homework..." + System.lineSeparator() + "only Starbucks will do.");
         return string.toString();
     }
 }

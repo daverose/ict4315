@@ -5,7 +5,6 @@ public class Lines {
     String twolines;
     String fivelines;
     String sevenLines;
-    String emptyString;
 
     public void setLines(){
         twolines = twoLines();

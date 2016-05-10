@@ -15,13 +15,14 @@ public class LineNumbers {
             FileReader fileReader = new FileReader(argsZero);
             return fileReader;
         } catch (FileNotFoundException fnf) {
-            System.out.println("The file you name you typed as the first argument does not exist as you" +
+            System.out.println("The file you name you typed as the first argument does not exist as you " +
                     "typed it in. If the file has an extension, that extension must also be included such as .txt");
         }
         return fileReader;
     }
 
     public FileWriter getOutputFile(String argsOne) {
+        Lines lines = new Lines();
         File f = new File(argsOne);
         if (f.exists() && !f.isDirectory()) {
             f.delete();
@@ -30,7 +31,9 @@ public class LineNumbers {
                     "must be changed to a name that is not a directory");
         }
         try {
-            FileWriter fileWriter = new FileWriter(argsOne);
+            FileWriter fileWriter = new FileWriter(f);
+            fileWriter.write(lines.fivelines());
+            fileWriter.close();
             return fileWriter;
         } catch (IOException ioe) {
             System.out.println("The file could not be created. A check was already made to see if the file name" +
@@ -40,6 +43,9 @@ public class LineNumbers {
         }
         return fileWriter;
     }
+    public void insertLineNumbers(FileReader inputFile){
+
+    }
 }
 
 //
@@ -47,4 +53,4 @@ public class LineNumbers {
 //
 //
 //    }
-}
+

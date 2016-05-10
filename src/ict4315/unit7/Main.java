@@ -16,7 +16,8 @@ public class Main {
 //        DataInputStream dataIn = stream.getDataIn(fileIn);
 //        DataOutputStream dataOut = stream.getDataOut(writeTo);
         lineNumbers.getInputFile(args[0]);
-        lineNumbers.getOutputFile(args[1]);
+       // lineNumbers.getOutputFile(args[1]);
+        lineNumbers.insertLineNumbers(lineNumbers.getInputFile(args[0]), args[1]);
 
 
 

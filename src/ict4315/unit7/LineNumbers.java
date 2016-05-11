@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 
 public class LineNumbers {
@@ -14,7 +15,6 @@ public class LineNumbers {
     public FileReader getInputFile(String argsZero) {
         String filePath = new File("").getAbsolutePath();
         String pathSeparator = System.getProperty("file.separator");
-        System.out.println("The following is your path." + pathSeparator.toString());
         System.out.println(filePath.concat(pathSeparator + argsZero));
         try {
             FileReader fileReader = new FileReader(filePath.concat(pathSeparator + argsZero));
@@ -29,12 +29,12 @@ public class LineNumbers {
      public void insertLineNumbers(FileReader inputFile, String argsOne){
         int i =0;
         StringBuilder newString = new StringBuilder();
-        Scanner sc = new Scanner(inputFile).useDelimiter("\r\n");
+
+         Scanner sc = new Scanner(inputFile).useDelimiter(Pattern.compile("[\\r\\n;]+"));
         while ( sc.hasNext() ){
             ++i;
             newString.append(i + " " + sc.next() + System.lineSeparator());
         }
-      //  Lines lines = new Lines();
         File f = new File(argsOne);
         if (f.exists() && !f.isDirectory()) {
             f.delete();
@@ -52,15 +52,7 @@ public class LineNumbers {
                     " in the location you've chosen?");
             ioe.printStackTrace();
         }
-
-
-
     }
 }
 
-//
-//    public void insertLineNumbers(DataInputStream dataIn, DataOutputStream dataOut) {
-//
-//
-//    }
 

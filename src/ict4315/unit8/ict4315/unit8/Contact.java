@@ -34,7 +34,13 @@ public class Contact {
             return new Contact(this);
         }
     }
-    public String toString(){
+    public String firstNameToString(){
         return firstName;
+    }
+    public String lastNameToString() {
+        return lastName;
+    }
+    public String emailToString() {
+        return email;
     }
 }

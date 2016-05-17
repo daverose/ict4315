@@ -6,9 +6,6 @@ import static org.junit.Assert.assertTrue;
 
 public class ContactTest {
 
-    public void createAddressBook() {
-
-    }
     public void addContact() {
 
     }
@@ -16,10 +13,10 @@ public class ContactTest {
     public void deleteContact() {
 
     }
-    public void search() {
+    public void searchByName(String name) {
+
 
     }
-    public void edit() {
-
-    }
+    //This needs to locate the contact, find the location in the arrylist and replace it with the new entry.
+    public void edit() {}
 }

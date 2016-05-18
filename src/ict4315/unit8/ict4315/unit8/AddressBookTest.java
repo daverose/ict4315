@@ -1,4 +1,5 @@
 package ict4315.unit8;
+import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertTrue;
@@ -18,9 +19,23 @@ public class AddressBookTest {
             .email("dcmetro@yahoo.com")
             .build();
     static {abook.add(lore);}
-
-    public void testThatContactWasDeleted(Contact c) {
-
+    public static Contact bill = new Contact.ContactBuilder()
+            .firstName("Bill")
+            .lastName("Smith")
+            .email("smith@yahoo.com")
+            .build();
+    static {abook.add(bill);}
+@Test
+    public void testThatContactWasDeleted() {
+    boolean contactNotPresent;
+for ( Contact contact : abook) {
+    if ( !abook.contains(contact)) {
+        contactNotPresent = true;
+    } else {
+        contactNotPresent = false;
+    }
+}
+    assertTrue(contactNotPresent = false);
     }
 
 

@@ -53,4 +53,7 @@ public class Contact {
         str.append(firstName + System.lineSeparator() + lastName + System.lineSeparator() + email + System.lineSeparator());
         return str.toString();
     }
+    public void edit(ArrayList<Contact> c , Contact contactToEdit, String firstName, String lastName, String email){
+        Contact editedContact = new Contact();
+    }
 }

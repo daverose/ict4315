@@ -52,8 +52,9 @@ public class AddressBookTest {
     assertTrue(contactNotPresent == true);
     }
 
-@Test
+@Test // removed contact dave in deletion test, must add back to pass.
     public void testSearchByName() {
+    abook.add(dave);
         String name = "dave";
         Contact expected = dave;
         Contact result;
@@ -61,5 +62,12 @@ public class AddressBookTest {
         assertTrue(result.equals(expected));
     }
     //This needs to locate the contact, find the location in the arraylist and replace it with the new entry.
-    public void edit() {}
+    public void edit() {
+        String name = "dave";
+        Contact editedContact = new Contact.ContactBuilder().firstName("David").lastName("Rosie").email("davidrosie@gmail.com").build();
+        Contact contactToEdit = Contact.searchByName(abook, name);
+        Contact.edit(contactToEdit, editedContact);
+        assertTrue(!abook.contains(contactToEdit));
+        assertTrue(abook.contains(editedContact));
+    }
 }

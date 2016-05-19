@@ -42,7 +42,7 @@ public class AddressBookTest {
     public void testThatContactWasDeleted() {
     abook.remove(dave);
     boolean contactNotPresent = false;
-for ( Contact c : abook) {
+    for ( Contact c : abook) {
     if ( !abook.contains(dave)) {
         contactNotPresent = true;
     } else {
@@ -52,11 +52,13 @@ for ( Contact c : abook) {
     assertTrue(contactNotPresent == true);
     }
 
-
-    public void testSearchByName(String name) {
-
-
-
+@Test
+    public void testSearchByName() {
+        String name = "dave";
+        Contact expected = dave;
+        Contact result;
+        result = Contact.searchByName(abook, name);
+        assertTrue(result.equals(expected));
     }
     //This needs to locate the contact, find the location in the arraylist and replace it with the new entry.
     public void edit() {}

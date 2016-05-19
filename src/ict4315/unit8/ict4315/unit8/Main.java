@@ -17,6 +17,9 @@ public class Main {
         addressBook.add(lore);
         for (Contact c : addressBook) {
             System.out.print(c.displayContact() + System.lineSeparator());
+            Contact result;
+            result = Contact.searchByName(addressBook, "Dave");
+            System.out.println(result.displayContact());
 
         }
     }

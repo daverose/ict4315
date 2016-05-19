@@ -16,7 +16,7 @@ public class Main {
                 .build();
         addressBook.add(lore);
         for (Contact c : addressBook) {
-            System.out.print(c.firstNameToString() + System.lineSeparator() + c.lastNameToString() + System.lineSeparator() + c.emailToString() + System.lineSeparator() + System.lineSeparator());
+            System.out.print(c.displayContact() + System.lineSeparator());
 
         }
     }

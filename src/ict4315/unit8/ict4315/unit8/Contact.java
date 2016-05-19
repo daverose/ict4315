@@ -34,13 +34,9 @@ public class Contact {
             return new Contact(this);
         }
     }
-    public String firstNameToString(){
-        return firstName;
-    }
-    public String lastNameToString() {
-        return lastName;
-    }
-    public String emailToString() {
-        return email;
+    public String displayContact() {
+        StringBuilder str = new StringBuilder();
+        str.append(firstName + System.lineSeparator() + lastName + System.lineSeparator() + email + System.lineSeparator());
+        return str.toString();
     }
 }

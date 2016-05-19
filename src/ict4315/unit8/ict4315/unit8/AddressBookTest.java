@@ -4,15 +4,15 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.assertTrue;
 
-
+//abook contains three contacts to start
 public class AddressBookTest {
     public static ArrayList<Contact> abook = new ArrayList<>();
-    public static Contact contact = new Contact.ContactBuilder()
+    public static Contact dave = new Contact.ContactBuilder()
             .firstName("Dave")
             .lastName("Rose")
             .email("davearose@gmail.com")
             .build();
-    static { abook.add(contact);}
+    static { abook.add(dave);}
    public static Contact lore = new Contact.ContactBuilder()
             .firstName("Lore")
             .lastName("De Rienzo")
@@ -25,21 +25,36 @@ public class AddressBookTest {
             .email("smith@yahoo.com")
             .build();
     static {abook.add(bill);}
+    @Test
+    //The contact dave is present as it is loaded in the abook above
+    public void testThatContactExists(){
+        boolean contactExists = false;
+        for ( Contact c : abook) {
+            if ( abook.contains(dave)) {
+                contactExists = true;
+            } else {
+                contactExists = false;
+            }
+        }
+        assertTrue(contactExists == true);
+    }
 @Test
     public void testThatContactWasDeleted() {
-    boolean contactNotPresent;
-for ( Contact contact : abook) {
-    if ( !abook.contains(contact)) {
+    abook.remove(dave);
+    boolean contactNotPresent = false;
+for ( Contact c : abook) {
+    if ( !abook.contains(dave)) {
         contactNotPresent = true;
     } else {
         contactNotPresent = false;
     }
 }
-    assertTrue(contactNotPresent = false);
+    assertTrue(contactNotPresent == true);
     }
 
 
     public void testSearchByName(String name) {
+
 
 
     }

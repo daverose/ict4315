@@ -8,17 +8,30 @@ public class PersonalIncome implements Income {
         if (cents > 0) {
             this.personalIncome = personalIncome + cents;
         } else {
-            throw new IllegalArgumentException("The value of cents added to income must be grater than zero");
+            throw new IllegalArgumentException("The value of cents added to personal income must be grater than zero");
         }
     }
-    public void addShortTermStockGains(int cents) {
-        this.personalIncome = personalIncome + cents;
+    public void addShortTermStockGains(int cents) throws IllegalArgumentException {
+        if ( cents > 0 ) {
+            this.personalIncome = personalIncome + cents;
+        } else {
+            throw new IllegalArgumentException("The value of cents added to short term stock gains income must be grater than zero");
+        }
+
     }
     public void addLongTermStockGains(int cents) {
-        this.personalIncome = personalIncome + cents;
+        if (cents > 0) {
+            this.personalIncome = personalIncome + cents;
+        } else {
+            throw new IllegalArgumentException("The value of cents added to long term stock gains income must be grater than zero");
+        }
     }
     public void addRentalIncome(int cents) {
-        this.personalIncome = personalIncome + cents;
+        if (cents > 0) {
+            this.personalIncome = personalIncome + cents;
+        } else {
+            throw new IllegalArgumentException("The value of cents added to rental income bust be greater than zero");
+        }
     }
     public int getPersonalIncome() {
         return this.personalIncome;

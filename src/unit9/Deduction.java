@@ -2,9 +2,9 @@ package unit9;
 
 
 public interface Deduction {
-    public void deductCharityContributions(int cents);
-    public void deductHomeInterest(int cents);
-    public void deductStockWashSale(int cents);
-    public void deductStandardSingle(int cents);
-    public void deductStandardMarried(int cents);
+    void deductCharityContributions(int cents);
+    void deductHomeInterest(int cents);
+    void deductStockWashSale(int cents);
+    void deductStandardSingle(int cents);
+    void deductStandardMarried(int cents);
 }

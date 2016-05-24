@@ -2,19 +2,20 @@ package unit9;
 
 public class PersonalDeduction implements Deduction{
     private int deduction;
-    public void deductChartityContribution() {
+
+    public void deductCharityContributions(int cents) {
 
     }
-    private void deductHomeInsterest(){
+    public void deductHomeInterest(int cents){
 
     }
-    private void deductStockWashSale(){
+    public void deductStockWashSale(int cents){
 
     }
-    private void deductStandardSingle() {
+    public void deductStandardSingle(int cents) {
 
     }
-    private void deductStandardMarried() {}
+    public void deductStandardMarried(int cents) {}
 
 
 }

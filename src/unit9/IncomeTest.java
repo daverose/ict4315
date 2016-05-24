@@ -36,7 +36,7 @@ public class IncomeTest {
         assertTrue(myIncome.getPersonalIncome() - rentalIncome == incomeBeforeAddingRental);
 
     }
-    @Test ( expected = IllegalArgumentException.class)
+    @Test ( expected = IllegalArgumentException.class )
     public void addRentalIncomeNotNegative() {
         myIncome.addRentalIncome(-200000);
     }

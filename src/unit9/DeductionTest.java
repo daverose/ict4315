@@ -1,7 +1,6 @@
 package unit9;
 
 import org.junit.Test;
-
 import static org.junit.Assert.assertTrue;
 
 public class DeductionTest {
@@ -58,12 +57,9 @@ public class DeductionTest {
         assertTrue(deductionsAfterStandardMarried - myDeductions.getMarriedStandardDeduction() == deductionsBeforeStandardMarried);
     }
     @Test(expected = Exception.class)
-    public void canNotDeductMarriedMoreThanOnce() {
-        try {
-            myDeductions.deductStandardMarried();
-        } catch (Exception e) {
-            System.out.println("The error was expected because we called deductStandardMarried() in the deductStandardMarriedTest");
-        }
+    public void canNotDeductMarriedMoreThanOnce() throws Exception {
+        myDeductions.deductStandardMarried();
     }
 
 }
+

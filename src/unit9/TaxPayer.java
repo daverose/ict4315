@@ -20,6 +20,17 @@ public class TaxPayer {
         deduction = new PersonalDeduction();
         income = new PersonalIncome();
     }
+    public void setIncome(int sts, int lts, int rental, int personal ) {
+        income.addShortTermStockGains(sts);
+        income.addLongTermStockGains(lts);
+        income.addRentalIncome(rental);
+        income.addPersonalIncome(personal);
+    }
+    public void setDeduction(int home, int charity, int wash) {
+        deduction.deductHomeInterest(home);
+        deduction.deductCharityContributions(charity);
+        deduction.deductStockWashSale(wash);
+    }
 
     public void setMaritalStatus(boolean married) {
         this.married = married;

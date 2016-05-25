@@ -27,10 +27,10 @@ public class PersonalIncome implements Income {
         }
     }
     public void addRentalIncome(int cents) {
-        if (cents > 0) {
+        if (cents >= 0) {
             this.personalIncome = personalIncome + cents;
         } else {
-            throw new IllegalArgumentException("The value of cents added to rental income bust be greater than zero");
+            throw new IllegalArgumentException("The value of cents added to rental income bust be less than zero");
         }
     }
     public int getPersonalIncome() {

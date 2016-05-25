@@ -9,10 +9,10 @@ public class TaxCalculator {
         int minimumCentsForRate;
         int maximumCentsForRate;
 
-        public TaxBracket(double taxRate, int minimumCentsForRate, int maximumCentsForRate) {
-            taxRate = taxRate;
-            minimumCentsForRate = minimumCentsForRate;
-            maximumCentsForRate = maximumCentsForRate;
+        public TaxBracket(double tr, int min, int max) {
+            taxRate = tr;
+            minimumCentsForRate = min;
+            maximumCentsForRate = max;
         }
     }
     public ArrayList<TaxBracket> getTaxRates(){

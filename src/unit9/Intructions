@@ -1,0 +1,14 @@
+Write a simple income tax calculator. There should be no application, no command line interaction, no main method, no GUI,
+just the functionality. This is an exercise in design, interfaces and implementation. I do not expect you to implement the entire tax code;
+a trivial implementation (worth no credit but that can form a base to get started with) would be to have a single class “IncomeTaxCalculator”
+with methods “setIncome(int income)” and “int getTax()”. A more interesting implementation would have several setXXX() methods such as tax paid,
+other income, deductions, etc. You should make use of other classes to provide calculation functionality - e.g. an “AmtCalculation” class.
+Do not use double, float or any other decimal type. Either use dollars or pennies, but whichever you must round to the nearest whole number.
+
+My general expectation is that you’ll have a central class that represents the tax calculator and its published interface.
+This would then use several other classes, preferably via interfaces, to perform its calculations. I expect you to make this interesting,
+and possibly even useful, but you should make no attempt to make it represent a real tax calculator. For example, on the one end if your tax calculation
+is to simply be: “return income / 10;” you’ll get very little credit. On the other end, if you find yourself referring to the tax code or looking up
+how it’s done in reality, then you’re spending too much time on it.
+
+To receive any credit for this assignment you must write unit tests for every class you write.

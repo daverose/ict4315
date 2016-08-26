@@ -1,0 +1,11 @@
+2
+0
+/
+0
+=
+Exception in thread "AWT-EventQueue-0" java.lang.ArrayIndexOutOfBoundsException: 1
+	at calculator.NumberEntry.fromDouble(NumberEntry.java:24)
+	at calculator.NumberEntry.updateState(NumberEntry.java:80)
+	at calculator.CalculatorStack.updateState(CalculatorStack.java:35)
+	at calculator.CalculatorMediator.operatorPressed(CalculatorMediator.java:23)
+	at calculator.CalculatorUI$3.actionPerformed(CalculatorUI.java:138)
